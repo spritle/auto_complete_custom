@@ -1,0 +1,47 @@
+html legend {
+    position:absolute;
+    top: -1em;
+    left: .5em;
+}
+html fieldset {
+    margin-top:1em;
+    padding-top:2em;
+    padding-bottom: 2em;
+    border-color:black;
+}
+
+* html fieldset {
+    position: relative;
+}
+
+/* Form Styles */
+fieldset {
+    background-color:#DBEBF7;
+    border:1px solid #B4DFF2;
+}
+legend {
+    color: white;
+    background: #CC3333;
+    padding: .4em 1em;
+}
+label {
+    width: 10em;
+    float: left;
+    text-align: right;
+    margin-right: 0.2em;
+    display: block;
+}
+.form_row {
+    white-space:nowrap;
+    padding-bottom: .5em;
+    padding-right: 1em;
+}
+.submit {
+    margin-left: 15em;
+}
+
+
+
+
+
+
