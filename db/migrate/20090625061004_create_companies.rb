@@ -29,6 +29,13 @@ class CreateCompanies < ActiveRecord::Migration
     company3.country = "India."
     company3.save
 
+    company4 = Company.new
+    company4.name ="Thought Works"
+    company4.address1 = "Airport Road"
+    company4.address2 = "Bangalore, Karnataka"
+    company4.country = "India."
+    company4.save
+
   end
   
 

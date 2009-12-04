@@ -1,4 +1,21 @@
 <div class="form_row">
+  <label for="company_name">Company name:</label>
+  <%= text_field_with_auto_complete :company, :name, {:size => 40},
+    {:url => 'user/companies', :method => 'get', :with => "'search='+element.value",
+    :after_update_element =>
+      "function (ele, value)
+    {
+    new Ajax.Request('/user/data_loader/' + value.innerHTML,
+    {
+    asynchronous:true,
+    evalScripts:true,
+    parameters:'authenticity_token=' + auth_token
+    });
+    return false;
+    }
+    "} %>
+</div>
+<div class="form_row">
   <label for="address1">Address1:</label>
   <input name="company[address1]" value= <%= @company.address1 %>  size="40" type="text">
 </div>
@@ -9,5 +26,6 @@
 </div>
 <div class="form_row">
   <label for="country">Country:</label>
-<input name="company[country]" value= <%= @company.country %> size="40" type="text">
+  <input name="company[country]" value= <%= @company.country %> size="40" type="text">
 </div>
+<%= hidden_field :company, :id %>
